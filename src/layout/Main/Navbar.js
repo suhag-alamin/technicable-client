@@ -9,7 +9,7 @@ const Navbar = () => {
     <div>
       <Popover className="relative bg-white">
         <div className="">
-          <div className="flex items-center justify-between border-b-2 border-techniblePrimary py-4 mb-6 md:justify-start md:space-x-10">
+          <div className="flex items-center justify-between border-b-2 border-technicablePrimary py-4 mb-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="/">
                 <span className="sr-only">Your Company</span>
@@ -29,19 +29,19 @@ const Navbar = () => {
             <Popover.Group as="nav" className="hidden space-x-10 md:flex">
               <Link
                 to="/"
-                className="text-base font-bold text-technibleSecondary hover:text-technibleTeriary"
+                className="text-base font-bold text-technicableSecondary hover:text-technicableTeriary"
               >
                 Home
               </Link>
               <Link
                 to="/"
-                className="text-base font-bold text-technibleSecondary hover:text-technibleTeriary"
+                className="text-base font-bold text-technicableSecondary hover:text-technicableTeriary"
               >
                 Reading history
               </Link>
               <Link
                 to="/"
-                className="text-base font-bold text-technibleSecondary hover:text-technibleTeriary"
+                className="text-base font-bold text-technicableSecondary hover:text-technicableTeriary"
               >
                 Docs
               </Link>
@@ -49,7 +49,7 @@ const Navbar = () => {
             <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
               <Link
                 to="/dashboard"
-                className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-techniblePrimary text-technibleWhite font-bold px-4 py-2 text-base text-white shadow-sm hover:bg-indigo-700"
+                className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-technicablePrimary text-technicableWhite font-bold px-4 py-2 text-base text-white shadow-sm hover:bg-indigo-700"
               >
                 Dashboard
               </Link>
@@ -68,7 +68,7 @@ const Navbar = () => {
         >
           <Popover.Panel
             focus
-            className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden bg-technibleWhite text-technibleSecondary"
+            className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden bg-technicableWhite text-technicableSecondary"
           >
             <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="px-5 pt-5 pb-6">
@@ -88,19 +88,19 @@ const Navbar = () => {
                 <div className="grid grid-cols- gap-y-4 gap-x-8">
                   <Link
                     to="/"
-                    className="text-base font-bold text-technibleSecondary hover:text-technibleTeriary"
+                    className="text-base font-bold text-technicableSecondary hover:text-technicableTeriary"
                   >
                     Home
                   </Link>
                   <Link
                     to="/"
-                    className="text-base font-bold text-technibleSecondary hover:text-technibleTeriary"
+                    className="text-base font-bold text-technicableSecondary hover:text-technicableTeriary"
                   >
                     Reading history
                   </Link>
                   <Link
                     to="/"
-                    className="text-base font-bold text-technibleSecondary hover:text-technibleTeriary"
+                    className="text-base font-bold text-technicableSecondary hover:text-technicableTeriary"
                   >
                     Docs
                   </Link>

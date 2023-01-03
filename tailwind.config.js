@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      techniblePrimary: "#3A9BDC",
-      technibleSecondary: "#050A30",
-      technibleTeriary: "#4942CE",
-      technibleWhite: "#F5F8FA",
-      technibleRed: "#F25F5C",
+      technicablePrimary: "#3A9BDC",
+      technicableSecondary: "#050A30",
+      technicableTeriary: "#4942CE",
+      technicableWhite: "#F5F8FA",
+      technicableRed: "#F25F5C",
     },
   },
   plugins: [],
