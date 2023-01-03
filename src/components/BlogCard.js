@@ -17,6 +17,12 @@ const BlogCard = ({ blog }) => {
             alt={blog.title}
           />
           <div class="p-6">
+            {/* time to read  */}
+            <div class="flex items-center flex-wrap ">
+              <span class="text-xs text-technicableRed inline-flex items-center mb-2">
+                {blog.timeToRead} min read
+              </span>
+            </div>
             <h2 class="tracking-widest text-xs title-font font-bold text-technicableTeriary mb-1">
               {blog.category}
             </h2>
@@ -39,7 +45,7 @@ const BlogCard = ({ blog }) => {
             </div>
             <div class="flex items-center flex-wrap ">
               <Link
-                to="/"
+                to={`/blog/${blog._id}`}
                 class="text-technicableSecondary inline-flex items-center md:mb-2 lg:mb-0"
               >
                 Learn More
