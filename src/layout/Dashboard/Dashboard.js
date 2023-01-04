@@ -30,7 +30,7 @@ const Dashboard = () => {
       <div className="col-span-2 hidden lg:block">
         <Sidebar toggleSidebar={toggleSidebar} />
       </div>
-      <div className="col-span-10 w-full bg-gray-100 rounded-lg">
+      <div className="col-span-10 w-full bg-gray-100 rounded-lg p-3">
         <Outlet />
       </div>
     </div>

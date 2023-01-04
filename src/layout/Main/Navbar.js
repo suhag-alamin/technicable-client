@@ -9,7 +9,7 @@ const Navbar = () => {
     <div>
       <Popover className="relative bg-white">
         <div className="">
-          <div className="flex items-center justify-between border-b-2 border-technicablePrimary py-4 mb-6 md:justify-start md:space-x-10">
+          <div className="flex items-center justify-between border-b border-technicablePrimary py-4 mb-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link to="/">
                 <img
