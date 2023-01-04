@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlineArrowRight, AiOutlineHeart } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
 import { useDispatch } from "react-redux";

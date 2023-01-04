@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import BlogCard from "../../components/BlogCard";
 
@@ -13,6 +12,14 @@ const ReadingHistory = () => {
           .map((blog) => (
             <BlogCard key={blog._id} blog={blog} />
           ))}
+      </div>
+    );
+  } else {
+    content = (
+      <div className="py-4">
+        <p className="text-technicableRed text-2xl text-center">
+          Your Reading History is Empty. Please Read Some Blogs.
+        </p>
       </div>
     );
   }

@@ -4,9 +4,11 @@ import Navbar from "./Navbar";
 
 const Main = () => {
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 ">
       <Navbar />
-      <Outlet />
+      <div className="min-h-screen">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
