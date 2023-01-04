@@ -4,7 +4,7 @@ import BlogCard from "../../components/BlogCard";
 const ReadingHistory = () => {
   const readingHistory = useSelector((state) => state.blog.readingHistory);
   let content;
-  if (readingHistory.length) {
+  if (readingHistory.length > 0) {
     content = (
       <div className="grid md:grid-cols-2 xl:grid-cols-3">
         {readingHistory

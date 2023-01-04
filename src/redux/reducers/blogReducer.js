@@ -1,4 +1,5 @@
 import {
+  ADD_CONTENT,
   ADD_TO_READING_HISTORY,
   GET_CONTENT,
 } from "../actionTypes/actionTypes";
@@ -16,6 +17,11 @@ const blogReducer = (state = initialState, action) => {
       return {
         ...state,
         blogs: action.payload,
+      };
+    case ADD_CONTENT:
+      return {
+        ...state,
+        blogs: [...state.blogs, action.payload],
       };
     case ADD_TO_READING_HISTORY:
       if (readBlog) {

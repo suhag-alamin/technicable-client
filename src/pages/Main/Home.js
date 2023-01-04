@@ -20,7 +20,7 @@ const Home = () => {
 
   let content;
 
-  if (blogs.length) {
+  if (blogs.length > 0) {
     content = (
       <div className="grid md:grid-cols-2 xl:grid-cols-3">
         {blogs.map((blog) => (
@@ -38,7 +38,7 @@ const Home = () => {
       </div>
     );
   }
-  if (blogs.length && uploadFilter !== "all") {
+  if (blogs.length > 0 && uploadFilter !== "all") {
     content = (
       <div className="grid md:grid-cols-2 xl:grid-cols-3">
         {blogs
@@ -58,7 +58,7 @@ const Home = () => {
       </div>
     );
   }
-  if (blogs.length && tagFilter) {
+  if (blogs.length > 0 && tagFilter) {
     content = (
       <>
         <div className="flex justify-center items-center gap-2">

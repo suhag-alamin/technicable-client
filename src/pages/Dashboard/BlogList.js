@@ -37,11 +37,11 @@ const BlogList = () => {
               </thead>
 
               <tbody class="text-sm divide-y divide-technicablePrimary">
-                {blogs.map(({ title, author, creditLink, category, _id }) => (
+                {blogs?.map(({ title, author, creditLink, category, _id }) => (
                   <tr>
                     <td class="p-2">
                       <h4 class="font-bold text-technicablePrimary text-sm">
-                        {title.slice(0, 20)}...
+                        {title?.slice(0, 20)}...
                       </h4>
                     </td>
                     <td class="p-2">

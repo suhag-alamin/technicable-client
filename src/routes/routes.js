@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Error from "../components/Error";
 import Dashboard from "../layout/Dashboard/Dashboard";
 import Main from "../layout/Main/Main";
+import AddBlog from "../pages/Dashboard/AddBlog";
 import BlogList from "../pages/Dashboard/BlogList";
 import Home from "../pages/Main/Home";
 import ReadingHistory from "../pages/Main/ReadingHistory";
@@ -26,7 +27,13 @@ const routes = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
-    children: [{ path: "/dashboard", element: <BlogList /> }],
+    children: [
+      { path: "/dashboard", element: <BlogList /> },
+      {
+        path: "add-blog",
+        element: <AddBlog />,
+      },
+    ],
   },
   {
     path: "*",

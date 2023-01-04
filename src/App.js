@@ -3,7 +3,6 @@ import { RouterProvider } from "react-router-dom";
 import "./App.css";
 import store from "./redux/store";
 import routes from "./routes/routes";
-// new Date().toISOString();
 // https://technicable-server.onrender.com
 
 const App = () => {
