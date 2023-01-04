@@ -37,6 +37,12 @@ const blogReducer = (state = initialState, action) => {
           ...state.blogs.filter((blog) => blog._id !== action.payload._id),
           action.payload,
         ],
+        readingHistory: [
+          ...state.readingHistory.filter(
+            (blog) => blog._id !== action.payload._id
+          ),
+          action.payload,
+        ],
       };
     case ADD_TO_READING_HISTORY:
       if (readBlog) {
