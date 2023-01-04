@@ -2,6 +2,7 @@ import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { FaPen } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
+import deleteBlogData from "../../redux/thunk/blogs/deleteBlogData";
 
 const BlogList = () => {
   const blogs = useSelector((state) => state.blog.blogs);
@@ -70,7 +71,10 @@ const BlogList = () => {
                         <button className="bg-technicablePrimary text-technicableWhite w-8 h-8 p-2 rounded-lg text-center flex justify-center items-center text-2xl ">
                           <FaPen />
                         </button>
-                        <button className="bg-technicableRed text-technicableWhite w-8 h-8 p-2 rounded-lg text-center flex justify-center items-center text-2xl ">
+                        <button
+                          onClick={() => dispatch(deleteBlogData(_id))}
+                          className="bg-technicableRed text-technicableWhite w-8 h-8 p-2 rounded-lg text-center flex justify-center items-center text-2xl "
+                        >
                           <AiFillDelete />
                         </button>
                       </div>

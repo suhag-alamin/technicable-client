@@ -1,5 +1,5 @@
 import axios from "axios";
-import { addBlog } from "../actions/blogActions";
+import { addBlog } from "../../actions/blogActions";
 
 const addBlogData = (blog) => {
   return async (dispatch) => {

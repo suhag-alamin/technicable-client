@@ -5,8 +5,9 @@ import {
   clearTagFilter,
   toggleFilter,
 } from "../../redux/actions/filterActions";
-import getBlogData from "../../redux/thunk/getBlogData";
+
 import { HiXMark } from "react-icons/hi2";
+import getBlogData from "../../redux/thunk/blogs/getBlogData";
 
 const Home = () => {
   const dispatch = useDispatch();

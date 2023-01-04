@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import addBlogData from "../../redux/thunk/addBlogData";
+import addBlogData from "../../redux/thunk/blogs/addBlogData";
 
 const AddBlog = () => {
   const dispatch = useDispatch();
