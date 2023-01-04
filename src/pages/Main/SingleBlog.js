@@ -1,15 +1,10 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineArrowRight, AiOutlineHeart } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import { toggleTagFilter } from "../../redux/actions/filterActions";
+import { useParams } from "react-router-dom";
 
 const SingleBlog = () => {
-  const dispatch = useDispatch();
   const { id } = useParams();
   const [blog, setBlog] = useState({});
 

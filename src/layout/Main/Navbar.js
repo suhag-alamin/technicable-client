@@ -11,14 +11,13 @@ const Navbar = () => {
         <div className="">
           <div className="flex items-center justify-between border-b-2 border-technicablePrimary py-4 mb-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a href="/">
-                <span className="sr-only">Your Company</span>
+              <Link to="/">
                 <img
                   className="h-8 w-auto sm:h-10"
                   src={logo}
                   alt="technible"
                 />
-              </a>
+              </Link>
             </div>
             <div className="-my-2 -mr-2 md:hidden">
               <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -34,7 +33,7 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                to="/"
+                to="/reading-history"
                 className="text-base font-bold text-technicableSecondary hover:text-technicableTeriary"
               >
                 Reading history
@@ -93,7 +92,7 @@ const Navbar = () => {
                     Home
                   </Link>
                   <Link
-                    to="/"
+                    to="/reading-history"
                     className="text-base font-bold text-technicableSecondary hover:text-technicableTeriary"
                   >
                     Reading history

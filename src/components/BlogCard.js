@@ -3,6 +3,7 @@ import { AiOutlineArrowRight, AiOutlineHeart } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { addToReadingHistory } from "../redux/actions/blogActions";
 import { toggleTagFilter } from "../redux/actions/filterActions";
 
 const BlogCard = ({ blog }) => {
@@ -47,6 +48,7 @@ const BlogCard = ({ blog }) => {
               <Link
                 to={`/blog/${blog._id}`}
                 class="text-technicableSecondary inline-flex items-center md:mb-2 lg:mb-0"
+                onClick={() => dispatch(addToReadingHistory(blog))}
               >
                 Learn More
                 <AiOutlineArrowRight className="ml-2 text-technicablePrimary" />
