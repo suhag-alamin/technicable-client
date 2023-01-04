@@ -3,6 +3,7 @@ import {
   ADD_TO_READING_HISTORY,
   DELETE_CONTENT,
   GET_CONTENT,
+  UPDATE_CONTENT,
 } from "../actionTypes/actionTypes";
 
 export const getBlog = (blogs) => {
@@ -30,5 +31,12 @@ export const deleteBlog = (_id) => {
   return {
     type: DELETE_CONTENT,
     payload: _id,
+  };
+};
+
+export const editBlog = (blog) => {
+  return {
+    type: UPDATE_CONTENT,
+    payload: blog,
   };
 };

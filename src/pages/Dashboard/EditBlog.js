@@ -1,20 +1,36 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import addBlogData from "../../redux/thunk/blogs/addBlogData";
+import { useParams } from "react-router-dom";
+import editBlogData from "../../redux/thunk/blogs/editBlogData";
 
-const AddBlog = () => {
+const EditBlog = () => {
+  const { id } = useParams();
   const dispatch = useDispatch();
-  const blogs = useSelector((state) => state.blog.blogs);
+  const blog = useSelector((state) =>
+    state.blog.blogs.find((blog) => blog._id === id)
+  );
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      _id: blog?._id,
+      title: blog?.title,
+      img: blog?.img,
+      author: blog?.author,
+      likes: blog?.likes,
+      description: blog?.description,
+      createdDate: blog?.createdDate,
+      uploadPosition: blog?.uploadPosition,
+      category: blog?.category,
+      tags: blog?.tags?.map((tag) => tag).join("\n"),
+      timeToRead: blog?.timeToRead,
+      creditLink: blog?.creditLink,
+    },
+  });
   const onSubmit = (data) => {
-    data.likes = 0;
-    data.createdDate = new Date().toISOString();
-    data.uploadPosition = blogs.length;
     data.tags = data.tags.split("\n");
-    // add data to database
-    dispatch(addBlogData(data));
+
+    dispatch(editBlogData(id, data));
   };
 
   return (
@@ -24,7 +40,7 @@ const AddBlog = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <h3 className="text-technicableSecondary text-xl text-center mb-4">
-          Add new blog
+          Edit blog
         </h3>
         <input
           className="p-2 border border-technicablePrimary rounded outline-technicablePrimary text-base text-technicableSecondary"
@@ -86,4 +102,4 @@ const AddBlog = () => {
   );
 };
 
-export default AddBlog;
+export default EditBlog;

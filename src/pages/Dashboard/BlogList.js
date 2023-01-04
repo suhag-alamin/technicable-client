@@ -2,11 +2,16 @@ import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { FaPen } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import deleteBlogData from "../../redux/thunk/blogs/deleteBlogData";
 
 const BlogList = () => {
   const blogs = useSelector((state) => state.blog.blogs);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleEditClick = (_id) => {
+    navigate(`/dashboard/edit-blog/${_id}`);
+  };
   return (
     <div>
       <div class="flex flex-col justify-center items-center h-full w-full ">
@@ -68,7 +73,10 @@ const BlogList = () => {
                     </td>
                     <td class="p-2">
                       <div class="flex justify-center items-center gap-2">
-                        <button className="bg-technicablePrimary text-technicableWhite w-8 h-8 p-2 rounded-lg text-center flex justify-center items-center text-2xl ">
+                        <button
+                          onClick={() => handleEditClick(_id)}
+                          className="bg-technicablePrimary text-technicableWhite w-8 h-8 p-2 rounded-lg text-center flex justify-center items-center text-2xl "
+                        >
                           <FaPen />
                         </button>
                         <button
